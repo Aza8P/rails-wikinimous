@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <a class="brand" href="/">Wikinimous</a>
+    <button type="button">Tab</button>
+  </div>
+</nav>
+
+  <div class="col-sm-8 col-sm-offset-2">
+    <h1>New Article</h1>
+    <%= form_for(@article) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+<%= link_to "Back",articles_path %>

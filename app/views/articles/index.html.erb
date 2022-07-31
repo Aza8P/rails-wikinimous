@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <a class="brand" href="/">Wikinimous</a>
+    <button type="button" class="btn btn-primary"><%= link_to "create new", new_article_path %></button>
+  </div>
+</nav>
+
+<div class="list-group">
+    <article class="p-5">
+      <% @articles.each do |article| %>
+        <h2><%= link_to article.title, article_path(article) %></h2>
+        <%= article.content %>
+      <% end %>
+    </article>
+</div>
